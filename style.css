@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Roboto", sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient(farthest-corner at 40px 40px,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(https://coolwallpapers.me/picsup/6012476-background-nature-flowers-poppies.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-left: 4%;
+    padding-right: 4%;
+    box-sizing: border-box;
+}
+.bar{
+    height:12%;
+    display: flex;
+    align-items: center;
+}
+.name{
+    cursor: pointer;
+    color: #fefaee;
+    font-size: 15px;
+    flex: 1;
+}
+nav ul{
+    flex:1;
+    text-align: right;
+    top:50%;
+    left:50%;
+
+    margin: 0;
+    padding:0;
+    display: flex;
+    
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 50px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:#fefaee;
+    font-size: 15px;
+    position: relative;
+}
+nav ul li a:before{
+   content:'';
+   width:0px;
+   height: 5px;
+   background:rgb(169, 58, 58);
+   position: absolute;
+   top:100%;
+   left:0;
+   transition: 0.5s;
+}
+nav ul li:hover a:before{
+    width:75%;
+}
+nav ul li a:hover{
+    color:#aeadaa;
+}
+
+.about{
+    display: flex;
+    height: 88%;
+    align-items:center;
+}
+.info{
+flex-basis: 40%
+}
+h1{
+    color:#fefaee;
+    font-size: 50px;
+}
+p{
+    color:#fefaee;
+    font-size: 13px;
+}
