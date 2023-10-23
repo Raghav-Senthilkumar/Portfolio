@@ -1,3 +1,6 @@
+html,body{
+  overflow:hidden;
+}
 *{
     margin:0;
     padding:0;
@@ -6,8 +9,7 @@
 .container{
     width: 100%;
     height: 100vh;
-    background-image: radial-gradient(farthest-corner at 40px 40px,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(https://coolwallpapers.me/picsup/6012476-background-nature-flowers-poppies.jpg);
-    background-position: center;
+    background-image: radial-gradient(farthest-corner at 40px 40px,rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(desert.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -25,13 +27,17 @@
     color: #fefaee;
     font-size: 15px;
     flex: 1;
+    background: linear-gradient(45deg, #858585, #e74c3c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 nav ul{
     flex:1;
     text-align: right;
     top:50%;
     left:50%;
-
     margin: 0;
     padding:0;
     display: flex;
@@ -67,17 +73,137 @@ nav ul li a:hover{
 
 .about{
     display: flex;
-    height: 88%;
+    height: 90%;
     align-items:center;
+    
+    
 }
 .info{
 flex-basis: 40%
+
 }
 h1{
     color:#fefaee;
     font-size: 50px;
+    text-transform: uppercase;
+    position: relative;
+    animation: neon 2.0s ease-in-out infinite alternate;
+  }
+  
+@keyframes neon {
+0% {
+      text-shadow: 0 0 10px #7a7a7a, 0 0 20px #7a7a7a, 0 0 30px #7a7a7a;
+ }
+100% {
+      text-shadow: 0 0 10px rgb(169, 58, 58), 0 0 20px rgb(169, 58, 58), 0 0 30px rgb(169, 58, 58);
 }
+  }
 p{
     color:#fefaee;
-    font-size: 13px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif
+}
+.info{
+    flex-basis: 50%;
+}
+.card{
+    width:200px;
+    height:350px;
+    border-radius: 15px;
+    display: inline-block;
+    background-image: radial-gradient(farthest-corner at 40px 40px,rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(rose.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 3px solid white;
+}
+.pie{
+    height: 250px;
+    width:250px;
+    position: relative;
+    padding-left: 200px;
+}
+.insta,.github,.snapchat,.linkedin{
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient( #eaeaea , #9d9d9d);
+    position: absolute;
+    font-size:30px;
+    
+}
+.insta{
+    border-radius: 300px 15px 15px 15px;
+    box-shadow :0px 0px 15px -2px #555 inset;
+    transition: 0.3s ease;
+    color: #cc39a4;
+}
+.linkedin{
+    right: 0;
+    border-radius: 15px 300px 15px 15px;
+    box-shadow :0px 0px 15px -2px #555 inset;
+    transition: 0.3s ease;
+    color: #03a9fa;
+}
+.snapchat{
+    bottom:0;
+    border-radius: 15px 15px 15px 300px;
+    box-shadow :0px 0px 15px -2px #555 inser;
+    transition: 0.3s ease;
+    color: #000;
+}
+.github{
+    bottom:0;
+    right: 0;
+    border-radius: 15px 15px 300px 15px;
+    box-shadow :0px 0px 15px -2px #555 inser;
+    transition: 0.3s ease;
+    color: #000;
+}
+.insta ion-icon{
+    margin-top: 15px;
+    margin-left: 15px;
+
+}
+.linkedin ion-icon{
+    margin-top: 15px;
+    margin-right: 15px;
+
+}
+.snapchat ion-icon{
+    margin-bottom: 15px;
+    margin-left: 15px;
+
+}
+.github ion-icon{
+    margin-bottom: 15px;
+    margin-right: 15px;
+
+}
+.insta:hover{
+    transform: scale(1.05);
+    transition: 0.1s;
+    background:#cc39a4;
+    color: #fff;
+}
+.snapchat:hover{
+    transform: scale(1.05);
+    transition: 0.1s;
+    background:#FFFC00;
+    color: #fff;
+}
+.linkedin:hover{
+    transform: scale(1.05);
+    transition: 0.1s;
+    background:#0072b1;
+    color: #fff;
+}
+.github:hover{
+    transform: scale(1.05);
+    transition: 0.1s;
+    background:#313131;
+    color: #fff;
 }
